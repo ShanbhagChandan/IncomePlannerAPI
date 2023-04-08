@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DataBase\IncomePlannerDB\IncomePlannerDB.csproj" />
     <ProjectReference Include="..\DataBase\UserDBUtility\UserDBUtility.csproj" />
+    <ProjectReference Include="..\Library\BusinessLayer\BusinessLayer.csproj" />
     <ProjectReference Include="..\Library\Model\Model\Model.csproj" />
   </ItemGroup>
 

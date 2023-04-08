@@ -1,3 +1,4 @@
+using IncomePlannerDB.IncomePlannerDbService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -47,7 +48,10 @@ namespace IncomePlanner
             //Entity Framework
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("UserDbConnection")))
+                .AddDbContext<IncomePlannerDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("IncomePlannerDbConnection")));
 
             //For Identity
             services.AddIdentity<ApplicationUser, ApplicationRole>()

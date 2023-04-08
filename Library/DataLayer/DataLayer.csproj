@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Salary\" />
+    <ProjectReference Include="..\..\DataBase\IncomePlannerDB\IncomePlannerDB.csproj" />
+    <ProjectReference Include="..\Model\Model\Model.csproj" />
   </ItemGroup>
 
 </Project>
