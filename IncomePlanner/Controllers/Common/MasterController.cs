@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace IncomePlanner.Controllers.Common
 {
     [Authorize(Roles = "Admin,User")]
-    [Route("api/Common")]
+    [Route("Api/Common")]
     [ApiController]
     public class MasterController : ControllerBase
     {

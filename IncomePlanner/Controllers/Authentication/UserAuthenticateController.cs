@@ -17,6 +17,7 @@ using UserDBUtility.UserModels;
 
 namespace IncomePlanner.Controllers.Authentication
 {
+    [AllowAnonymous]
     [Route("Api/User")]
     [ApiController]
     public class UserAuthenticateController : ControllerBase
@@ -88,7 +89,8 @@ namespace IncomePlanner.Controllers.Authentication
                 var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name,user.UserName),
-                    new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
+                    new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
+                    new Claim("Id",Convert.ToString(user.Id))
                 };
                 foreach(var userRole in userRoles)
                 {
