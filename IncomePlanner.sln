@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IncomePlanner", "IncomePlanner\IncomePlanner.csproj", "{A205D69B-CF8B-49D4-B9EE-59398CF9BC6D}"
 EndProject
@@ -23,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Library\Model\Mode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IncomePlannerDB", "DataBase\IncomePlannerDB\IncomePlannerDB.csproj", "{BBC2EB4D-AC91-4EE5-8298-4E3D7677AD76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "Library\DataLayer\DataLayer.csproj", "{C2061F18-9C39-4093-97E1-ED69070F6D78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "Library\DataLayer\DataLayer.csproj", "{C2061F18-9C39-4093-97E1-ED69070F6D78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "Library\BusinessLayer\BusinessLayer.csproj", "{9D7AFF34-D93A-4564-A37F-1CAE6156395C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "Library\BusinessLayer\BusinessLayer.csproj", "{9D7AFF34-D93A-4564-A37F-1CAE6156395C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

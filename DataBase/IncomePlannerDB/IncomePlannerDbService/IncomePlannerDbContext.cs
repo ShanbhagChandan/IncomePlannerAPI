@@ -38,5 +38,7 @@ namespace IncomePlannerDB.IncomePlannerDbService
         public DbSet<UserHouseRentExcemption> UserHouseRentExcemptions { get; set; }
         public DbSet<ChapterVIASection80CC> ChapterVIASection80CC { get; set; }
         public DbSet<ChapterVIAOtherSection> ChapterVIAOtherSections { get; set; }
+        public DbSet<ExpensesItem> ExpensesItems { get; set; }
+        public DbSet<ExpensesTable> ExpensesTables { get; set; }
     }
 }

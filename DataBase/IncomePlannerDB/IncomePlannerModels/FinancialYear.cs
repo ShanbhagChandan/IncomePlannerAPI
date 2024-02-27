@@ -14,5 +14,6 @@ namespace IncomePlannerDB.IncomePlannerModels
         public ICollection<UserHouseRentExcemption> UserHouseRentExcemption { get; set; }
         public ICollection<ChapterVIASection80CC> ChapterVIASection80CC { get; set; }
         public ICollection<ChapterVIAOtherSection> ChapterVIAOtherSection { get; set; }
+        public ICollection<ExpensesTable> ExpensesTable { get; set; }
     }
 }
