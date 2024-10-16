@@ -29,7 +29,7 @@ namespace BusinessLayer.Charts
         {
             List<ExpensesCharts> expensesCharts = new List<ExpensesCharts>();
             List<ExpensesTables> expensesTables = await expenseDataLayer.GetExpenseCharts(userId);
-            List<Years> years = masterDataLayer.GetFinancialYears();
+            List<Years> years = await masterDataLayer.GetFinancialYears();
 
             if (expensesTables != null & expensesTables.Count > 0)
             {

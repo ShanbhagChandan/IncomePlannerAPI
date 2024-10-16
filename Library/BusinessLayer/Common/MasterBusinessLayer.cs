@@ -3,7 +3,9 @@ using IncomePlannerDB.IncomePlannerDbService;
 using Model.Common;
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLayer.Common
 {
@@ -15,19 +17,32 @@ namespace BusinessLayer.Common
             masterDataLayer = new MasterDataLayer(incomePlannerDbContext);
         }
 
-        public List<Regimes> GetRegimes()
+        public async Task<List<Regimes>> GetRegimes()
         {
-            List<Regimes> result = masterDataLayer.GetRegimes();
+            List<Regimes> result = await masterDataLayer.GetRegimes();
 
             return result;
         }
 
-        public List<Years> GetFinancialYears()
+        public async Task<List<Years>> GetFinancialYears()
         {
-            List<Years> result = masterDataLayer.GetFinancialYears();
+            List<Years> result = await masterDataLayer.GetFinancialYears();
 
             return result;
         }
 
+        public async Task<List<Banks>> GetBanks()
+        {
+            List<Banks> result = await masterDataLayer.GetBanks();
+
+            return result;
+        }
+
+        public async Task<List<AccountTypes>> GetAccountTypes()
+        {
+            List<AccountTypes> result = await masterDataLayer.GetAccountTypes();
+
+            return result;
+        }
     }
 }

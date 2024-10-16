@@ -4,14 +4,16 @@ using IncomePlannerDB.IncomePlannerDbService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IncomePlannerDB.Migrations
 {
     [DbContext(typeof(IncomePlannerDbContext))]
-    partial class IncomePlannerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240227125143_BankingTables")]
+    partial class BankingTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -145,9 +147,6 @@ namespace IncomePlannerDB.Migrations
 
                     b.Property<DateTime>("ModifiedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -456,7 +455,7 @@ namespace IncomePlannerDB.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("FixedDeposits");
+                    b.ToTable("FixedDeposit");
                 });
 
             modelBuilder.Entity("IncomePlannerDB.IncomePlannerModels.MutualFund", b =>
@@ -500,7 +499,7 @@ namespace IncomePlannerDB.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("MutualFunds");
+                    b.ToTable("MutualFund");
                 });
 
             modelBuilder.Entity("IncomePlannerDB.IncomePlannerModels.RecurringDeposit", b =>
@@ -541,7 +540,7 @@ namespace IncomePlannerDB.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("RecurringDeposits");
+                    b.ToTable("RecurringDeposit");
                 });
 
             modelBuilder.Entity("IncomePlannerDB.IncomePlannerModels.Saving", b =>
@@ -576,7 +575,7 @@ namespace IncomePlannerDB.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("Savings");
+                    b.ToTable("Saving");
                 });
 
             modelBuilder.Entity("IncomePlannerDB.IncomePlannerModels.TaxRegime", b =>

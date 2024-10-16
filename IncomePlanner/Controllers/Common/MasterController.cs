@@ -26,20 +26,67 @@ namespace IncomePlanner.Controllers.Common
 
         [HttpGet]
         [Route("Regimes")]
-        public List<Regimes> GetRegimes()
+        public async Task<IActionResult> GetRegimes()
         {
-            List<Regimes> result = masterBusinessLayer.GetRegimes();
+            try
+            {
+                List<Regimes> result = await masterBusinessLayer.GetRegimes();
 
-            return result;
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
+            
         }
 
         [HttpGet]
         [Route("FinancialYears")]
-        public List<Years> GetFinancialYears()
+        public async Task<IActionResult> GetFinancialYears()
         {
-            List<Years> result = masterBusinessLayer.GetFinancialYears();
+            try
+            {
+                List<Years> result = await masterBusinessLayer.GetFinancialYears();
 
-            return result;
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
+        }
+
+        [HttpGet]
+        [Route("Banks")]
+        public async Task<IActionResult> GetBanks()
+        {
+            try
+            {
+                List<Banks> result = await masterBusinessLayer.GetBanks();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error");
+            }            
+        }
+
+        [HttpGet]
+        [Route("AccountTypes")]
+        public async Task<IActionResult> GetAccountTypes()
+        {
+            try
+            {
+                List<AccountTypes> result = await masterBusinessLayer.GetAccountTypes();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error");
+            }           
         }
     }
 }
